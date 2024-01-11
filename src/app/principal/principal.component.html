@@ -6,10 +6,10 @@
     <input type="text"      placeholder="Cidade" class="form-control">
 
 
-  <input type="button" value="Cadastrar" ngIf="!btnCadastro" class="btn btn-primary">
-    <input type="button" value="Alterar" nhIf="!btnCadastro" class="btn btn-warning">
-    <input type="button" value="Remover" nhIf="!btnCadastro" class="btn btn-danger">
-    <input type="button" value="Cancelar" nhIf="!btnCadastro" class="btn btn-secondary">
+  <input type="button" value="Cadastrar" *ngIf="btnCadastro" class="btn btn-primary">
+    <input type="button" value="Alterar" *nhIf="!btnCadastro" class="btn btn-warning">
+    <input type="button" value="Remover" *nhIf="!btnCadastro" class="btn btn-danger">
+    <input type="button" value="Cancelar" *nhIf="!btnCadastro" class="btn btn-secondary">
 
 </form>
 
@@ -24,5 +24,13 @@
         </tr>
     </thead>
 
-    <tbody></tbody>
+    <tbody>
+        <tr *ngFor="let c of clients; index as i">
+            <td>{{i+1}}</td>
+            <td>{{c.clientName}}</td>
+            <td>{{c.clientAge}}</td>
+            <td>{{c.clientCity}}</td>
+            <td><button class="btn btn-success">Selecionar</button></td>
+        </tr>
+    </tbody>
 </table>
