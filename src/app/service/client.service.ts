@@ -8,8 +8,8 @@ import { Client } from '../model/Client';
 })
 export class ClientService {
 
-  // url da api
-  private url:string = 'http://localhost:8080';
+  // url da api exatamente igual ao do verbo no backend
+  private url:string = 'http://localhost:8080/clients/allClients';
 
   // construtor
   constructor(private http:HttpClient){

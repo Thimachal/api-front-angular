@@ -11,7 +11,11 @@ import { CommonModule } from '@angular/common';
   styleUrl: './principal.component.css'
 })
 export class PrincipalComponent {
-//variavel para visibilidade dos botões
+// Objeto do tipo Client
+client = new Client();
+
+
+  //variavel para visibilidade dos botões
   btnCadastro:boolean = true;
 
 

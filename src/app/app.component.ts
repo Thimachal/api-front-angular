@@ -9,9 +9,9 @@ import { BrowserModule } from '@angular/platform-browser';
 @Component({
     selector: 'app-root',
     standalone: true,
+    imports: [CommonModule, RouterOutlet, PrincipalComponent, FormsModule, HttpClientModule],
     templateUrl: './app.component.html',
-    styleUrl: './app.component.css',
-    imports: [CommonModule, RouterOutlet, PrincipalComponent, FormsModule, HttpClientModule]
+    styleUrl: './app.component.css'    
 })
 export class AppComponent {
   title = 'api-front';
